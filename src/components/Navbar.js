@@ -97,7 +97,7 @@ const Navbar = () => {
       >
         <MenuItem>Profile</MenuItem>
         <MenuItem>My account</MenuItem>
-        <MenuItem>Logout</MenuItem>
+        <MenuItem>Log out</MenuItem>
       </Menu>
     </AppBar>
   );
