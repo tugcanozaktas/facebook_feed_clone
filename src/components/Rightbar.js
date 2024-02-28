@@ -15,12 +15,12 @@ import React from "react";
 
 const Rightbar = () => {
   return (
-    <Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <Box sx={{ position: "fixed", width: 450 }}>
+    <Box flex={2} p={2}>
+      <Box>
         <Typography variant="h6" fontWeight={300}>
           Online Friends
         </Typography>
-        <AvatarGroup max={7}>
+        <AvatarGroup sx={{ justifyContent: "flex-end" }} max={3}>
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
           <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
           <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
@@ -35,7 +35,7 @@ const Rightbar = () => {
         <Typography mt={2} mb={2} variant="h6" fontWeight={300}>
           Latest Posts
         </Typography>
-        <ImageList cols={3} rowHeight={150} gap={5}>
+        <ImageList cols={2} rowHeight={150} gap={5}>
           <ImageListItem>
             <img src="paella.jpg" alt="" />
           </ImageListItem>
@@ -55,7 +55,7 @@ const Rightbar = () => {
             <img src="paella.jpg" alt="" />
           </ImageListItem>
         </ImageList>
-        <Typography mt={2}  variant="h6" fontWeight={300}>
+        <Typography mt={2} variant="h6" fontWeight={300}>
           Latest Conversations
         </Typography>
         <List

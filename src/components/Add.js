@@ -42,7 +42,7 @@ const Add = () => {
         title="Delete"
         sx={{
           position: "fixed",
-          bottom: 20,
+          bottom: 60,
           left: { xs: "calc(50% - 25px)", md: 30 },
         }}
       >

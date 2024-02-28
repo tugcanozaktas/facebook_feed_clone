@@ -4,6 +4,7 @@ import Rightbar from "./components/Rightbar";
 import { Box, createTheme, Stack, ThemeProvider } from "@mui/material";
 import Navbar from "./components/Navbar";
 import Add from "./components/Add";
+import BottomNav from "./components/BottomNav";
 import { useState } from "react";
 
 function App() {
@@ -14,16 +15,22 @@ function App() {
     },
   });
 
+  const [value, setValue] = useState("1");
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor={"background.default"} color={"text.primary"}>
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
-          <Sidebar setMode={setMode} mode={mode} />
-          <Feed />
-          <Rightbar />
+          {value === 0 ? (
+            <Sidebar setMode={setMode} mode={mode} />
+          ) : value === 2 ? (
+            <Rightbar />
+          ) : (
+            <Feed />
+          )}
         </Stack>
         <Add />
+        <BottomNav setValue={setValue} value={value} />
       </Box>
     </ThemeProvider>
   );
