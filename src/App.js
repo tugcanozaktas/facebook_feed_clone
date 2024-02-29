@@ -21,12 +21,22 @@ function App() {
       <Box bgcolor={"background.default"} color={"text.primary"}>
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
-          {value === 0 ? (
-            <Sidebar setMode={setMode} mode={mode} />
-          ) : value === 2 ? (
-            <Rightbar />
+          {window.innerWidth < 600 ? (
+            <>
+              {value === 0 ? (
+                <Sidebar setMode={setMode} mode={mode} />
+              ) : value === 2 ? (
+                <Rightbar />
+              ) : (
+                <Feed />
+              )}
+            </>
           ) : (
-            <Feed />
+            <>
+              <Sidebar setMode={setMode} mode={mode} />
+              <Feed />
+              <Rightbar />
+            </>
           )}
         </Stack>
         <Add />
