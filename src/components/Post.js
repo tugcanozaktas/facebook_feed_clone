@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Avatar,
-  Box,
   Card,
   CardActions,
   CardContent,
@@ -11,7 +10,6 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
