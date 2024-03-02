@@ -16,20 +16,23 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import React from "react";
+import { Link, redirect } from "react-router-dom";
 
 const Sidebar = ({ mode, setMode }) => {
   return (
     <Box flex={1} p={2}>
       <Box sx={{ position: { xs: "static", sm: "fixed" }, height: "100vh" }}>
         <List>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
-              <ListItemIcon>
-                <Home />
-              </ListItemIcon>
-              <ListItemText primary="Homepage" />
-            </ListItemButton>
-          </ListItem>
+          <Link to="/test">
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Home />
+                </ListItemIcon>
+                <ListItemText primary="Homepage" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
           <ListItem disablePadding>
             <ListItemButton component="a" href="#pages">
               <ListItemIcon>
@@ -71,7 +74,7 @@ const Sidebar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#profile">
+            <ListItemButton component="a">
               <ListItemIcon>
                 <AccountBoxIcon />
               </ListItemIcon>
@@ -79,7 +82,7 @@ const Sidebar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#profile">
+            <ListItemButton>
               <ListItemIcon>
                 <DarkModeIcon />
               </ListItemIcon>
